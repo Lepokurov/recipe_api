@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/styles.css">
+    <title>Title</title>
+</head>
+<body>
+<div class="d1">
+    <H1>ПОЛУЧИТЬ СПИСОК РЕЦЕПТОВ</H1>
+  <form action = "/recipes" method = "post">
+  <input type="text" name="name" placeholder="по названию">
+  <input type="text" name="hashtag" placeholder="по хештегу">
+  <input type="text" name="user" placeholder="по автору">
+
+    <p><select size="7" multiple name="dish_type">
+    <option value="" selected>Любой тип блюда</option>
+    <option value="Салат">Салат</option>
+    <option value="Первое">Первое</option>
+    <option value="Второе">Второе</option>
+    <option value="Суп">Суп</option>
+    <option value="Десерт">Десерт</option>
+    <option value="Напиток">Напиток</option>
+   </select></p>
+  <input type="checkbox" name="image" value="True">Наличие картинки<br>
+   <input type="hidden" name="image" value="" />
+  <input type="radio" name="order" value="date" checked>Дата<Br>
+  <input type="radio" name="order" value="likes">Лайки<Br>
+  <input type="radio" name="order" value="name">Название<Br>
+  <input type="radio" name="order" value="id">Пагинация<Br>
+  <button type="submit"></button>
+  </form>
+</div>
+<div class="d1">
+    <H1>ПОЛУЧИТЬ КОКТРЕТНЫЙ РЕЦЕПТ</H1>
+  <form action = "/recipe" method = "post">
+  <input type="text" name="name" placeholder="по названию">
+  <input type="text" name="hashtag" placeholder="по хештегу">
+  <input type="text" name="user" placeholder="по автору">
+
+    <p><select size="7" multiple name="dish_type">
+    <option value="" selected>Любой тип блюда</option>
+    <option value="Салат">Салат</option>
+    <option value="Первое">Первое</option>
+    <option value="Второе">Второе</option>
+    <option value="Суп">Суп</option>
+    <option value="Десерт">Десерт</option>
+    <option value="Напиток">Напиток</option>
+   </select></p>
+  <input type="checkbox" name="image" value="True">Наличие картинки<br>
+   <input type="hidden" name="image" value="" />
+  <input type="radio" name="order" value="date" checked>Дата<Br>
+  <input type="radio" name="order" value="likes">Лайки<Br>
+  <input type="radio" name="order" value="name">Название<Br>
+  <input type="radio" name="order" value="id">Пагинация<Br>
+  <button type="submit"></button>
+  </form>
+</div>
+</body>
+</html>
