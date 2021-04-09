@@ -37,8 +37,8 @@ class User(BaseModel):
 class Recipe(BaseModel):
     id = PrimaryKeyField(unique=True)
     author = ForeignKeyField(User)
-    date = DateField(default=get_date_now())
     name = CharField(null=False)
+    date = DateField(default=get_date_now())
     description = TextField()
     steps = TextField()
     image = CharField()
