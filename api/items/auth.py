@@ -77,12 +77,20 @@ async def register(request):
     """
     Если такого пользователя не существует - создание и авторизация, сущетвует - ошибка
     """
-    data = await request.post()
-    nickname = data['nickname']
-    if nickname == 'admin':
-        return web.Response(text='Reserved name')
-    user_data = add_user_(nickname)
-    login_user(user_data)
+    try:
+        # jsons
+        data = await request.json()
+    except:
+        # form_data
+        data = await request.post()
+    if 'nickname' in data:
+        nickname = data['nickname']
+        if nickname == 'admin':
+            return web.Response(text='Reserved name')
+        user_data = add_user_(nickname)
+        login_user(user_data)
+    else:
+        user_data = {'error': 'wrong key, require - nickname'}
     json_user = json.dumps(user_data, ensure_ascii=False)
     return web.Response(text=json_user)
 
