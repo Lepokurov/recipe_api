@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+</head>
+<body>
+    <H4><i>User - {{nickname}}</i></H4>
+<div class="d1">
+    <H1>ПОЛУЧИТЬ КОКТРЕТНОГО ПОЛЬЗОВАТЕЛЯ</H1>
+  <form action = "/get_user" method = "get">
+  <input type="text" name="nickname" placeholder="по никнейму">
+  <button type="submit"></button>
+  </form>
+</div>
+<div class="d1">
+    <H1>ПОЛУЧИТЬ СПИСОК ПОЛЬЗОВАТЕЛЕЙ</H1>
+  <form action = "/get_users_list" method = "get">
+  <input type="radio" name="by" value="recipes" checked>Рецепты<Br>
+  <input type="radio" name="by" value="likes">Лайки<Br>
+  <button type="submit"></button>
+  </form>
+</div>
+</body>
+</html>
