@@ -53,7 +53,7 @@ def add_recipe_(data, user):
                 steps=data['steps'],
                 image=data['image'],
                 dish_type=DishType.get(dish_type_name=data['dish_type']),
-                hashtags=data['hashtag'],
+                hashtags=data['hashtags'],
                 active=True
             )
             recipe.save()
@@ -106,7 +106,7 @@ def upd_recipe_(name_recipe, data, user):
 
 def delete_recipe_(name, user):
     """
-    изменить свой рецепт
+    удалить свой рецепт
     :param user: Пользователь, кто пытается удалить рецепт
     :param name: название рецепты
     :return: ответ как прошла операция

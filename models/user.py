@@ -30,7 +30,7 @@ def get_users_list_(data):
 
 def get_user_(nickname, authorization=False):
     """
-    Добавить пользователя
+    Достать пользователя
     :param nickname: никнейм
     :param authorization: Если авторизация, то другой ответ
     :return: json ответ с полями пользователя
@@ -69,7 +69,7 @@ def add_user_(nickname):
 
 def upd_user_(data, current_user):
     """
-    Удалить пользователя
+    Изменить пользователя
     :param data: параменты
     :param current_user: пользователь
     :return: ответ как прошла операция
